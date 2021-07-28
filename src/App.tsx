@@ -1,27 +1,24 @@
-import React from 'react';
-import './App.css';
-import Character from './component/Character';
-import Inventory from './component/Inventory';
-import ToDoList from './component/ToDoList';
-import Status from './component/Status';
-import StatusHistory from './component/StatusHistory';
+import React from 'react'
+import './App.css'
+
+import ProfileContainer from './container/ProfileContainer'
+import TodoContainer from './container/TodoContainer'
+import StatusContainer from './container/StatusContainer'
 
 function App() {
   return (
     <div className="App">
       <div className="Character">
-        <Character />
-        <Inventory />
+        <ProfileContainer />
       </div>
       <div className="ToDoList">
-        <ToDoList />
+        <TodoContainer />
       </div>
       <div className="Status">
-      <Status />
-      <StatusHistory />
+        <StatusContainer />
       </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
