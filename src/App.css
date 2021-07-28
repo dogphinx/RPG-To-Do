@@ -1,0 +1,13 @@
+.App {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.Character, .Status {
+  flex: 1 1 0;
+}
+
+.ToDoList {
+  flex: 2 1 0;
+}
