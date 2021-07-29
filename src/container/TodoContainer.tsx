@@ -23,11 +23,12 @@ function TodoContainer(): ReactElement {
           <input type="submit" value="등록" />
         </form>
         <Todo.ListWrap>
-          <Todo.ListType>집밥먹기</Todo.ListType>
+          <Todo.ListType>집 밥먹기</Todo.ListType>
           <Todo.ListType>샤워하기</Todo.ListType>
-          <Todo.ListType>방치우기</Todo.ListType>
-          <Todo.ListType>옷정리하기</Todo.ListType>
+          <Todo.ListType>방 치우기</Todo.ListType>
+          <Todo.ListType>옷 정리하기</Todo.ListType>
         </Todo.ListWrap>
+        {/* <Bucket.ListWarp></Bucket.ListWarp> */}
       </Todo.Section>
     </Todo>
   )

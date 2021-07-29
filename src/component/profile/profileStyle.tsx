@@ -60,7 +60,7 @@ export const ExpbarWrap = styled.div`
 export const Expbar = styled.div`
   background-color: blue;
   height: 30px;
-  width: 100%;
+  width: 30%;
 `
 export const Headline = styled.h1`
   text-align: center;

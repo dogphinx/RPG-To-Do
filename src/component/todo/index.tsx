@@ -10,6 +10,7 @@ import {
   DeleteButton,
   Section,
   Img,
+  // Bucket,
 } from './todoStyle'
 interface Props {
   children?: ReactNode
@@ -33,12 +34,15 @@ Todo.ListItem = function TodoListItem({ children, ...restprops }: Props): ReactE
 Todo.InputToDoList = function TodoInputToDoList({ children, ...restprops }: Props): ReactElement {
   return <InputToDoList {...restprops}>{children}</InputToDoList>
 }
+
 Todo.ListType = function TodoListType({ children, ...restprops }: Props): ReactElement {
   return (
     <ListType {...restprops}>
       {children}
-      <DoneButton>등록</DoneButton>
-      <DeleteButton>삭제</DeleteButton>
+      <DeleteButton>X</DeleteButton>
+      {/* 엑스도 사진이나 아이콘 찾아다가 변경해서 좀더 시각적으로 바꿔보는게 좋을듯해보임 딱딱해보여서... */}
+      <DoneButton>V</DoneButton>
+      {/* 완료 버튼 그냥 체크표시로 바꾸고 싶음 만들어서 사용할지 아이콘을 찾아다 쓸지 고민해보기. */}
     </ListType>
   )
 }
@@ -49,3 +53,17 @@ Todo.Section = function TodoSection({ children, ...restprops }: Props): ReactEle
 Todo.Img = function TodoImg({ children, ...restprops }: Props): ReactElement {
   return <Img {...restprops}>{children}</Img>
 }
+
+////////////////////////////////////////////////////////////////////////////////
+
+// Bucket.ListType = function TodoListType({ children, ...restprops }: Props): ReactElement {
+//   return (
+//     <ListType {...restprops}>
+//       {children}
+//       <DeleteButton>삭제</DeleteButton>
+//       <DoneButton>완료</DoneButton>
+//       <ProgressBar></ProgressBar>
+//     </ListType>
+//     // 일단 뼈대만 복사 어떻게 할지 조금 더 고민필요. 버킷리스트는 토글 모양으로 나와야하니까 요거 어떻게 만들지 제가 고민해볼게요 요거는 만들지 말아주세요.
+//   )
+// }
