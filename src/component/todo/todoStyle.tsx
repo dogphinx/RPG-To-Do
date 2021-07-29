@@ -68,3 +68,5 @@ export const DeleteButton = styled.a`
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 `
 export const Img = styled.div``
+
+export const Bucket = styled.div``

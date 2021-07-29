@@ -10,7 +10,7 @@ import {
   DeleteButton,
   Section,
   Img,
-  // Bucket,
+  Bucket,
 } from './todoStyle'
 interface Props {
   children?: ReactNode
@@ -56,14 +56,11 @@ Todo.Img = function TodoImg({ children, ...restprops }: Props): ReactElement {
 
 ////////////////////////////////////////////////////////////////////////////////
 
-// Bucket.ListType = function TodoListType({ children, ...restprops }: Props): ReactElement {
-//   return (
-//     <ListType {...restprops}>
-//       {children}
-//       <DeleteButton>삭제</DeleteButton>
-//       <DoneButton>완료</DoneButton>
-//       <ProgressBar></ProgressBar>
-//     </ListType>
-//     // 일단 뼈대만 복사 어떻게 할지 조금 더 고민필요. 버킷리스트는 토글 모양으로 나와야하니까 요거 어떻게 만들지 제가 고민해볼게요 요거는 만들지 말아주세요.
-//   )
-// }
+Todo.Bucket = function TodoBucket({ children, ...restprops }: Props): ReactElement {
+  return (
+    <ListItem {...restprops}>
+      {children}
+      <Todo.ListType></Todo.ListType>
+    </ListItem>
+  )
+}
