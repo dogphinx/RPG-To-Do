@@ -1,6 +1,8 @@
-import React, { ReactElement } from 'react'
+import React, { ReactElement, useEffect, useState } from 'react'
 import { Profile } from '../component'
 export default function ProfileContainer(): ReactElement {
+  const [face, setFace] = useState('')
+
   return (
     <Profile>
       <Profile.Section>

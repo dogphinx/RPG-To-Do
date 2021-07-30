@@ -2,11 +2,20 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App'
-
+import { Provider } from 'react-redux'
+import store from './store'
+import { firebaseapp } from './lib/firebase.prod'
+import { FirebaseContext } from './context/firebaseContext'
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  // 리덕스 사용을 위한 프로바이더
+  <Provider store={store}>
+    {/* 파이어베이스 사용을 위한 프로바이더. */}
+    <FirebaseContext.Provider value={{ firebaseapp }}>
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
+    </FirebaseContext.Provider>
+  </Provider>,
   document.getElementById('root')
 )
 
